@@ -776,65 +776,6 @@
                 scipy==1.10.1<br>
                 jupyter==1.0.0<br><br>
                 <span class="comment"># Instalar todas con:</span><br>
-                <span class="comment"># pip install -r requirements.txt</span>
-            </div>
-        </section>
-            
-            <h3 style="margin: 25px 0 15px 0; color: var(--primary);">Pasos de Instalación</h3>
-            
-            <div class="grid">
-                <div class="card">
-                    <h3><i class="fas fa-folder-plus"></i> Paso 1: Preparar Estructura</h3>
-                    <div class="code-block" style="margin-top: 15px;">
-                        <span class="comment"># Crear estructura de carpetas</span><br>
-                        <span class="string">$</span> mkdir proyecto-clustering<br>
-                        <span class="string">$</span> cd proyecto-clustering<br>
-                        <span class="string">$</span> mkdir data<br>
-                        <span class="string">$</span> mkdir src<br>
-                        <span class="string">$</span> mkdir results
-                    </div>
-                    <p style="margin-top: 15px; color: var(--gray);">Colocar <strong>Mall_Customers.csv</strong> dentro de la carpeta <strong>data/</strong></p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-code"></i> Paso 2: Instalar Dependencias</h3>
-                    <div class="code-block" style="margin-top: 15px;">
-                        <span class="comment"># Crear y activar entorno virtual</span><br>
-                        <span class="string">$</span> python -m venv venv<br><br>
-                        <span class="comment"># Windows:</span><br>
-                        <span class="string">$</span> venv\Scripts\activate<br><br>
-                        <span class="comment"># Linux/Mac:</span><br>
-                        <span class="string">$</span> source venv/bin/activate<br><br>
-                        <span class="comment"># Instalar paquetes</span><br>
-                        <span class="string">$</span> pip install -r requirements.txt
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-play-circle"></i> Paso 3: Ejecutar Análisis</h3>
-                    <div class="code-block" style="margin-top: 15px;">
-                        <span class="comment"># Ejecutar desde la raíz del proyecto</span><br>
-                        <span class="string">$</span> python src/main.py<br><br>
-                        <span class="comment"># O si main.py está en la raíz:</span><br>
-                        <span class="string">$</span> python main.py<br><br>
-                        <span class="comment"># Verificar que el CSV esté en data/</span><br>
-                        <span class="string">$</span> ls data/<br>
-                        Mall_Customers.csv
-                    </div>
-                </div>
-            </div>
-            
-            <h3 style="margin: 25px 0 15px 0; color: var(--primary);">requirements.txt</h3>
-            <div class="code-block">
-                <span class="comment"># Dependencias principales</span><br>
-                numpy==1.24.3<br>
-                pandas==2.0.0<br>
-                matplotlib==3.7.1<br>
-                seaborn==0.12.2<br>
-                scikit-learn==1.3.0<br>
-                scipy==1.10.1<br>
-                jupyter==1.0.0<br><br>
-                <span class="comment"># Instalar todas con:</span><br>
                 <span class="string"># pip install -r requirements.txt</span>
             </div>
         </section>
@@ -1113,18 +1054,6 @@
                         setTimeout(typeWriter, 0);
                     }
                 };
-                
-                // Agrega esto al final de tu script JavaScript
-                document.addEventListener('DOMContentLoaded', function() {
-                    // Limpiar código HTML mal interpretado
-                    const codeBlocks = document.querySelectorAll('.code-block');
-                    codeBlocks.forEach(block => {
-                        let content = block.innerHTML;
-                        // Reemplazar entidades HTML mal interpretadas
-                        content = content.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
-                        block.innerHTML = content;
-                    });
-                });
                 
                 // Solo activar typing si el bloque está en vista
                 const codeObserver = new IntersectionObserver((entries) => {
